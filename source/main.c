@@ -17,11 +17,6 @@
  *      Phase R -> ADC0
  *      Phase Y -> ADC1
  *      Phase B -> ADC2
- *
- * NOTE:
- * This is a reconstructed/reference implementation based
- * on the project documentation. The original source code
- * was not available in the project report.
  * ============================================================
  */
 
@@ -61,13 +56,6 @@
 
 /* ============================================================
  * CABLE PARAMETERS
- * ============================================================
- *
- * The physical prototype uses resistors to represent sections
- * of underground cable.
- *
- * Adjust these values according to the actual resistor network
- * used in the prototype.
  * ============================================================
  */
 
@@ -192,13 +180,6 @@ void LCD_Init(void)
  * ============================================================
  */
 
-/*
- * Initialize ADC.
- *
- * AVCC is used as the reference voltage.
- * ADC clock = F_CPU / 64
- */
-
 void ADC_Init(void)
 {
     ADMUX = (1 << REFS0);
@@ -260,21 +241,6 @@ unsigned int ADC_ReadAverage(unsigned char channel)
 /* ============================================================
  * FAULT DISTANCE CALCULATION
  * ============================================================
- *
- * The project works using the resistance/voltage relationship
- * described in the project report.
- *
- * A fault changes the resistance seen by the feeder.
- * The corresponding voltage is measured by the ADC.
- *
- * For this reconstructed implementation, the ADC value is
- * mapped to the equivalent cable distance.
- *
- * CALIBRATION:
- * The actual resistor values in the prototype must be used
- * to obtain an accurate physical distance.
- * ============================================================
- */
 
 float Calculate_Distance(unsigned int adc_value)
 {
