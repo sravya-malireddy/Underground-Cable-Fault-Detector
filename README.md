@@ -129,8 +129,6 @@ Embedded C
 Keil μVision
 Proteus ISIS
 
-The project documentation identifies Keil μVision and Proteus ISIS among the development/simulation tools used for the implementation.
-
 <img width="900" height="1058" alt="WhatsApp Image 2026-08-06 at 20 18 59" src="https://github.com/user-attachments/assets/69c492f2-573d-432b-8c7a-bcc6021a74d2" />
 
 <img width="2034" height="2644" alt="WhatsApp Image 2026-08-06 at 20 18 59 (1)" src="https://github.com/user-attachments/assets/e1daa182-505a-490c-9786-01483f8a8193" />
